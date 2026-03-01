@@ -96,4 +96,91 @@ gcloud auth application-default login
 
 ## Option 2: Override the Disable Service Key Creation Policy
 
-pending....
+Please follow the [video here on how to Override the Disable Service Key Creation Policy](https://drive.google.com/file/d/104oQPv5-DNWPe28gXGj1pbin9yilbGVX/view?usp=sharing)
+
+
+1. Go to the home screen and click on the projects selector
+
+![alt text](assets/override_policy/home_screen.png)
+
+2. Select the organization
+
+![alt text](assets/override_policy/select_orgn.png)
+
+3. Resulting screen is as follows and click on the search bar:
+
+![alt text](assets/override_policy/orgn_selected.png)
+
+4. Select `IAM & Admin`
+
+![alt text](assets/override_policy/select_iam.png)
+
+5. Click on the edit button to add a new role
+
+![alt text](assets/override_policy/edit_add_roles.png)
+
+6. Click on `Add Another Role`
+
+![alt text](assets/override_policy/add_new_role.png)
+
+7. Add `Organization Policy Administrator` and click `Save`
+
+![alt text](assets/override_policy/add_orgn_policy_admin.png)
+
+8. Select `Organization Policies`
+
+![alt text](assets/override_policy/select_orgn_policies.png)
+
+9. Click to search the policies
+
+![alt text](assets/override_policy/search_policies.png)
+
+10. Type and search for `Disable Service Account Key Creation`
+
+![alt text](assets/override_policy/search_for_disable_service_key.png)
+
+11. You should have 2 policies as shown below:
+
+![alt text](assets/override_policy/disable_creation_policies.png)
+
+**Please note that we need to override both policies using the follow ways.** Click on the first policy.
+
+12. Click on `Manage Policy`
+
+![alt text](assets/override_policy/manage_policy.png)
+
+13. Select `Override Parents Policies`
+
+![alt text](assets/override_policy/select_override.png)
+
+14. Click on `Add Rule`
+
+![alt text](assets/override_policy/add_rule.png)
+
+15. Set `Enforcement` to `Off` and click `Done`
+
+![alt text](assets/override_policy/set_enforcement_off.png)
+
+16. Click on `Set Policy`
+
+![alt text](assets/override_policy/set_policy.png)
+
+**You need to override both policy shown in step 11.**
+
+You can proceed to download the service key. However, if you encounter issue you will need to perform step 11 to step 16 at the project level.
+
+### To switch from Organization to Project Level
+
+1. Click project selector
+
+![alt text](assets/override_policy/click_project_selector.png)
+
+2. Select your project
+
+![alt text](assets/override_policy/select_project.png)
+
+3. Search for policy at the project level
+
+![alt text](assets/override_policy/search_policies_project.png)
+
+Then you need to override both policies at the project level by repeating step 11 to step 16. 
